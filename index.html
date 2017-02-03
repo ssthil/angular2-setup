@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular 2 app</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="node_modules/materialize-css/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        .code-style {
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+        .pre-style {
+            padding:10px;
+        }
+    </style>
+      <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <!-- Load our angular app with Systemjs -->
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function(err) { console.error(err); });
+  </script>
+</head>
+
+<body>
+    <nav class="blue-grey darken-3" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Angular 2 Setup</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Navbar Link</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div class="section no-pad-bot">
+        <div class="container">
+            <h2 class="header deep-orange-text">
+                Setting up an Angular 2 Development Environment
+            </h2>
+        </div>
+        <div class="container">
+            <div class="section">
+                <p>In this tutorial, we’ll avoid using the CLI and learn how to set up our development environment from scratch.</p>
+                <ul>
+                    <li>Thanks to the "target": "es5" option, TypeScript will transpile our ES6 code to ES5 so that all browsers
+                        can understand the JavaScript code we write.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h4>Set up Your Base Project</h4>
+                <p>Quickly go ahead and create a new directory, <code class="code-style amber lighten-3">newapp</code>. Move into the directory and create an <code class="code-style amber lighten-3">index.html</code></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h5>package.json</h5>
+                <p>Create another file, <code class="code-style amber lighten-3">package.json</code> by running the <code class="code-style amber lighten-3">npm init</code> command from the terminal. You can simply just type enter several times throughout all the questions been asked to speedily create the file.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h5>lite-server</h5>
+                <p>Let’s install a package, <code class="code-style amber lighten-3">lite-server</code>, that will allow us to serve our application like so:</p>
+                <pre class="pre-style blue lighten-5">npm install --save-dev lite-server</pre>
+                <p class="red-text">lite-server comes bundled with <span class="black-text">browser-sync</span> which automatically reloads the browser when our files change.</p>
+                <p>Open up <code class="code-style amber lighten-3">package.json</code> to configure lite-server like so:</p>
+                <pre class="pre-style blue lighten-5">
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+    }
+                </pre>
+                <p>Now run <code class="code-style amber lighten-3">npm run</code> lite from your terminal, your browser should open up displaying your application and in your terminal, you should see something like this:</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
