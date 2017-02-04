@@ -20,5 +20,8 @@ Let’s install a package, `lite-server`, that will allow us to serve our applic
 npm install --save-dev lite-server
 ```
 
-Open up package.json to configure lite-server like so:
+Open up package.json to configure `lite-server` like so:
+
+###Demo link
+[http://angular2-setup.azurewebsites.net/]
 
